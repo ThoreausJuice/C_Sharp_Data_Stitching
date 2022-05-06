@@ -62,7 +62,7 @@ namespace ConsoleApp1
                         Console.WriteLine(B_second_split_strings[0]);
                         Console.WriteLine(A_time_a);
                         Console.WriteLine("相等");
-                    } 
+                    }
                 }
             }
             Console.ReadLine();
