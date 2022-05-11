@@ -56,7 +56,8 @@ namespace ConsoleApp1
                     // Console.WriteLine(A_time_a);
                     // Console.WriteLine(A_time_a.GetType());
                     string a = B_second_split_strings[0];
-                    string b = Program.A_time_a;
+                    string b = A_time_a;
+                    Console.WriteLine(a.Equals(b));
                     if (a == b)
                     {
                         Console.WriteLine(B_second_split_strings[0]);

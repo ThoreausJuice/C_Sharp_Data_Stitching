@@ -6,3 +6,11 @@ C:\Users\邱光磊\source\repos\C_Sharp_Data_Stitching\ConsoleApp4\obj\Debug\Con
 C:\Users\邱光磊\source\repos\C_Sharp_Data_Stitching\ConsoleApp4\obj\Debug\ConsoleApp4.csproj.CoreCompileInputs.cache
 C:\Users\邱光磊\source\repos\C_Sharp_Data_Stitching\ConsoleApp4\obj\Debug\ConsoleApp4.exe
 C:\Users\邱光磊\source\repos\C_Sharp_Data_Stitching\ConsoleApp4\obj\Debug\ConsoleApp4.pdb
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\ConsoleApp4\bin\Debug\ConsoleApp4.exe.config
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\ConsoleApp4\bin\Debug\ConsoleApp4.exe
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\ConsoleApp4\bin\Debug\ConsoleApp4.pdb
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\ConsoleApp4\obj\Debug\ConsoleApp4.csproj.AssemblyReference.cache
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\ConsoleApp4\obj\Debug\ConsoleApp4.csproj.SuggestedBindingRedirects.cache
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\ConsoleApp4\obj\Debug\ConsoleApp4.csproj.CoreCompileInputs.cache
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\ConsoleApp4\obj\Debug\ConsoleApp4.exe
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\ConsoleApp4\obj\Debug\ConsoleApp4.pdb
