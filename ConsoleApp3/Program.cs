@@ -5,17 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
+// 用于使用ArrayList
+using System.Collections;
+
 namespace ConsoleApp3
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            double b, c;
-            b = 2049;
-            c = 1863;
-            double a = b / c;
-            Console.WriteLine(a);
+            ArrayList a = new ArrayList();
+            a.Add(1);
+            a.Add("NULL");
+            a.Add(3);
+            for(int i = 0; i < a.Count; i++)
+            {
+                Console.WriteLine(a[i]);
+            }
             Console.ReadLine();
         }
 

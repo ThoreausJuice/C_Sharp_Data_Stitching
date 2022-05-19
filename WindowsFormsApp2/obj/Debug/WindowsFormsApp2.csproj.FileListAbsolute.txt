@@ -1,0 +1,11 @@
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe.config
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.exe
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\WindowsFormsApp2\bin\Debug\WindowsFormsApp2.pdb
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.AssemblyReference.cache
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.SuggestedBindingRedirects.cache
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Form1.resources
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.Properties.Resources.resources
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.GenerateResource.cache
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.csproj.CoreCompileInputs.cache
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.exe
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\WindowsFormsApp2\obj\Debug\WindowsFormsApp2.pdb
