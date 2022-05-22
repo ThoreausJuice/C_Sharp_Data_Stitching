@@ -356,8 +356,8 @@ namespace ConsoleApp4
                         if(production_time_B >= workshop_time && production_time_B < workshop_time.AddMinutes(10))
                         {
                             B_workshop_time.Add(workshop_time);
-                            B_temperature.Add(sql_dr_5["K13车间5#（B线加料）温度"]);
-                            B_humidity.Add(sql_dr_5["K13车间5#（B线加料）湿度"]);
+                            B_temperature.Add(sql_dr_5["K13车间5#(B线加料)温度"]);
+                            B_humidity.Add(sql_dr_5["K13车间5#(B线加料)湿度"]);
                         }
                     }
 
@@ -446,8 +446,8 @@ namespace ConsoleApp4
                                         "[K12车间2#(B线润叶)湿度],"+
 
                                         "阶段B车间时间,"+
-                                        "[K13车间5#（B线加料）温度],"+
-                                        "[K13车间5#（B线加料）湿度],"+
+                                        "[K13车间5#(B线加料)温度],"+
+                                        "[K13车间5#(B线加料)湿度],"+
 
                                         "阶段C车间时间,"+
                                         "[K11车间4#(C线切丝)温度],"+
@@ -604,8 +604,8 @@ namespace ConsoleApp4
                     if(production_time_B >= workshop_time && production_time_B < workshop_time.AddMinutes(10))
                     {
                         B_workshop_time.Add(workshop_time);
-                        B_temperature.Add(sql_dr_5["K13车间5#（B线加料）温度"]);
-                        B_humidity.Add(sql_dr_5["K13车间5#（B线加料）湿度"]);
+                        B_temperature.Add(sql_dr_5["K13车间5#(B线加料)温度"]);
+                        B_humidity.Add(sql_dr_5["K13车间5#(B线加料)湿度"]);
                     }
                 }
 

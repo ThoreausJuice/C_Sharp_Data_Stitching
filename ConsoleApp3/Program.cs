@@ -14,20 +14,19 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            ArrayList a = new ArrayList();
-            a.Add(1);
-            a.Add("NULL");
-            a.Add(3);
-            for(int i = 0; i < a.Count; i++)
-            {
-                Console.WriteLine(a[i]);
-            }
+            string a = DateTime.Now.ToString("yyyyMMddHHmmssffff");
+            a += "F001";
+            a += "0001";
+            int b = 10;
+            ArrayList c = new ArrayList();
+            c.Add(b);
+            string d = b.ToString().PadLeft(4,'0');
+            Console.WriteLine(d);
             Console.ReadLine();
         }
-
-        public static int add_two_number(int x, int y)
+        public static string test_function()
         {
-            return x + y;
+            return System.Reflection.MethodBase.GetCurrentMethod().Name;
         }
     }
 }
