@@ -14,14 +14,26 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            string a = DateTime.Now.ToString("yyyyMMddHHmmssffff");
-            a += "F001";
-            a += "0001";
-            int b = 10;
-            ArrayList c = new ArrayList();
-            c.Add(b);
-            string d = b.ToString().PadLeft(4,'0');
-            Console.WriteLine(d);
+            List<ArrayList> a = new List<ArrayList>();
+            List<ArrayList> b = new List<ArrayList>();
+            List<ArrayList> c = new List<ArrayList>();
+            a.Add(1);a.Add(2);a.Add(3);
+            b.Add(4);b.Add(5);b.Add(6);
+            c.Add(a);c.Add(b);
+            foreach(var i in c)
+            {
+                foreach(var j in i)
+                {
+                    Console.WriteLine(j);
+                }
+            }
+            // for(int i = 0; i < c.Count; i++)
+            // {
+            //     for(int j = 0; j < c[i].Count; j++)
+            //     {
+            //         Console.WriteLine(c[i][j]);
+            //     }
+            // }
             Console.ReadLine();
         }
         public static string test_function()

@@ -23,13 +23,16 @@ namespace 数据表操作_控制台
             //                                     ref featureName_set,
             //                                     ref UnitID_set);
 
-            truncate_table();
+            truncate_table("[T_Pred_Data]");
+            truncate_table("[T_Pred_Test]");
             
             // 获取 BatchId 集合
             ArrayList BatchId_set = new ArrayList();
             BatchID_get(ref BatchId_set);
 
-            for(int BatchId_index = 0; BatchId_index < 2; BatchId_index++) //BatchId_set.Count
+            // print_test(BatchId_set);
+
+            for(int BatchId_index = 0; BatchId_index < BatchId_set.Count; BatchId_index++) //BatchId_set.Count
             {
                 if(stage_all_length(Convert.ToString(BatchId_set[BatchId_index])) < 3)
                 {
@@ -45,7 +48,11 @@ namespace 数据表操作_控制台
                 ArrayList WorkOrderID_set_B = new ArrayList();
                 ArrayList WorkOrderID_set_C = new ArrayList();
                 ArrayList WorkOrderID_set_D = new ArrayList();
+
                 string BatchID = Convert.ToString(BatchId_set[BatchId_index]);
+                // string BatchID = "2021022202"; // 插入值有空值
+                // string BatchID = "2021031606"; // 主键重复
+                
                 period_and_WorkOrderID_get(BatchID, 
                                             ref stage_A, 
                                             ref stage_B, 
@@ -175,9 +182,10 @@ namespace 数据表操作_控制台
                     s_A_i = Convert.ToInt32(Math.Floor(stage_A_index));
                     s_B_i = Convert.ToInt32(Math.Floor(stage_B_index));
                     s_C_i = Convert.ToInt32(Math.Floor(stage_C_index));
-                    if(A_temperature[i] != "NULL" && A_humidity[i] != "NULL"&&
-                        B_temperature[i] != "NULL" && B_humidity[i] != "NULL" &&
-                        C_shredded_temperature[i] != "NULL" && C_shredded_humidity[i] != "NULL" && C_roasted_temperature[i] != "NULL" && C_roasted_humidity[i] != "NULL")
+                    if(Convert.ToString(A_temperature[i]) != "NULL" && Convert.ToString(A_humidity[i]) != "NULL"&&
+                        Convert.ToString(B_temperature[i]) != "NULL" && Convert.ToString(B_humidity[i]) != "NULL" &&
+                        Convert.ToString(C_shredded_temperature[i]) != "NULL" && Convert.ToString(C_shredded_humidity[i]) != "NULL" &&
+                        Convert.ToString(C_roasted_temperature[i]) != "NULL" && Convert.ToString(C_roasted_humidity[i]) != "NULL")
                     {
                         SpecificFlag ++;
                         // 阶段A
@@ -262,7 +270,7 @@ namespace 数据表操作_控制台
                         // 阶段A
                         // [K12车间2#(B线润叶)温度]
                         FeatureID = "F010";
-                        splicing_scheme_1(Convert.ToString(A_WorkOrderID[i]),
+                        splicing_scheme_1(Convert.ToString(A_WorkOrderID[s_A_i]),
                                             BatchID,
                                             Convert.ToString(A_workshop_time[i]),
                                             FeatureID,
@@ -270,7 +278,7 @@ namespace 数据表操作_控制台
                                             Convert.ToString(A_temperature[i]));
                         // [K12车间2#(B线润叶)湿度]
                         FeatureID = "F011";
-                        splicing_scheme_1(Convert.ToString(A_WorkOrderID[i]),
+                        splicing_scheme_1(Convert.ToString(A_WorkOrderID[s_A_i]),
                                             BatchID,
                                             Convert.ToString(A_workshop_time[i]),
                                             FeatureID,
@@ -280,7 +288,7 @@ namespace 数据表操作_控制台
                         // 阶段B
                         // [K13车间5#(B线加料)温度]
                         FeatureID = "F012";
-                        splicing_scheme_1(Convert.ToString(B_WorkOrderID[i]),
+                        splicing_scheme_1(Convert.ToString(B_WorkOrderID[s_B_i]),
                                             BatchID,
                                             Convert.ToString(B_workshop_time[i]),
                                             FeatureID,
@@ -288,7 +296,7 @@ namespace 数据表操作_控制台
                                             Convert.ToString(B_temperature[i]));
                         // [K13车间5#(B线加料)湿度]
                         FeatureID = "F013";
-                        splicing_scheme_1(Convert.ToString(B_WorkOrderID[i]),
+                        splicing_scheme_1(Convert.ToString(B_WorkOrderID[s_B_i]),
                                             BatchID,
                                             Convert.ToString(B_workshop_time[i]),
                                             FeatureID,
@@ -298,7 +306,7 @@ namespace 数据表操作_控制台
                         // 阶段C
                         // [K11车间4#(C线切丝)温度]
                         FeatureID = "F014";
-                        splicing_scheme_1(Convert.ToString(C_WorkOrderID[i]),
+                        splicing_scheme_1(Convert.ToString(C_WorkOrderID[s_C_i]),
                                             BatchID,
                                             Convert.ToString(C_workshop_time[i]),
                                             FeatureID,
@@ -306,7 +314,7 @@ namespace 数据表操作_控制台
                                             Convert.ToString(C_shredded_temperature[i]));
                         // [K11车间4#(C线切丝)湿度]
                         FeatureID = "F015";
-                        splicing_scheme_1(Convert.ToString(C_WorkOrderID[i]),
+                        splicing_scheme_1(Convert.ToString(C_WorkOrderID[s_C_i]),
                                             BatchID,
                                             Convert.ToString(C_workshop_time[i]),
                                             FeatureID,
@@ -314,7 +322,7 @@ namespace 数据表操作_控制台
                                             Convert.ToString(C_shredded_humidity[i]));
                         // [K11车间6#(C线烘丝)湿度]
                         FeatureID = "F016";
-                        splicing_scheme_1(Convert.ToString(C_WorkOrderID[i]),
+                        splicing_scheme_1(Convert.ToString(C_WorkOrderID[s_C_i]),
                                             BatchID,
                                             Convert.ToString(C_workshop_time[i]),
                                             FeatureID,
@@ -322,19 +330,27 @@ namespace 数据表操作_控制台
                                             Convert.ToString(C_roasted_temperature[i]));
                         // [K11车间6#(C线烘丝)温度]
                         FeatureID = "F017";
-                        splicing_scheme_1(Convert.ToString(C_WorkOrderID[i]),
+                        splicing_scheme_1(Convert.ToString(C_WorkOrderID[s_C_i]),
                                             BatchID,
                                             Convert.ToString(C_workshop_time[i]),
                                             FeatureID,
                                             Convert.ToString(SpecificFlag),
                                             Convert.ToString(C_roasted_humidity[i]));
+                        
+                        // 顺手拼个小张能直接用的表
+                        splicing_scheme_2(Convert.ToString(A_3[s_A_i]), Convert.ToString(A_10[s_A_i]), Convert.ToString(A_11[s_A_i]), Convert.ToString(A_2[s_A_i]),
+                                          Convert.ToString(B_5[s_B_i]), Convert.ToString(B_7[s_B_i]), Convert.ToString(B_1[s_B_i]),
+                                          Convert.ToString(C_9[s_C_i]), Convert.ToString(C_6[s_C_i]),
+                                          Convert.ToString(A_temperature[i]), Convert.ToString(A_humidity[i]),
+                                          Convert.ToString(B_temperature[i]), Convert.ToString(B_humidity[i]),
+                                          Convert.ToString(C_shredded_temperature[i]), Convert.ToString(C_shredded_humidity[i]), Convert.ToString(C_roasted_temperature[i]), Convert.ToString(C_roasted_humidity[i]));
                     }
                     // 变更索引
                     stage_A_index += data_increment[0];
                     stage_B_index += data_increment[1];
                     stage_C_index += data_increment[2];
                 }
-                Console.WriteLine(BatchID);
+                Console.WriteLine(BatchId_index + " : " + BatchID);
                 Console.WriteLine(SpecificFlag + " / " + Number_of_stage_Min);
             }
             Console.WriteLine("fin");
@@ -347,12 +363,12 @@ namespace 数据表操作_控制台
 
             for(int i = 0; i < any_set.Count; i++)
             {
-                Console.WriteLine(any_set[i]);
+                Console.WriteLine(i + " : " + any_set[i]);
             }
             Console.WriteLine();
         }
 
-        public static void truncate_table()
+        public static void truncate_table(string table_name)
         {
             // truncate table [Prediction].[dbo].[T_Pred_Data]
             // 连接数据库
@@ -360,12 +376,12 @@ namespace 数据表操作_控制台
             SqlConnection con = new SqlConnection(sql_link);
             // 打开连接并判断连接状态
             con.Open();
-            string sql_truncate = "truncate table [Prediction].[dbo].[T_Pred_Data]";
+            string sql_truncate = "truncate table [Prediction].[dbo]." + table_name;
             SqlCommand sql_truncate_cmd = new SqlCommand(sql_truncate, con);
             sql_truncate_cmd.ExecuteNonQuery();
-
             // 关闭数据库连接
             con.Close();
+            Console.WriteLine(table_name + " 已清空");
         }
 
         public static void BatchID_get(ref ArrayList BatchId_set)
@@ -917,6 +933,7 @@ namespace 数据表操作_控制台
         {
             DateTime RecordTime = Convert.ToDateTime(X_0);
             string InputID = RecordTime.ToString("yyyyMMddHHmmssffff") + 
+                                BatchID +
                                 FeatureID + 
                                 SpecificFlag.PadLeft(4,'0');
             // 连接数据库
@@ -947,6 +964,80 @@ namespace 数据表操作_控制台
                                 ","+
                                 SpecificFlag+","+
                                 Value+
+                                ")";
+            // Console.WriteLine(sql_insert);// 这句用来查看SQL命令
+            SqlCommand sql_insert_cmd = new SqlCommand(sql_insert, con);
+            sql_insert_cmd.ExecuteNonQuery();
+
+            // 关闭数据库连接
+            con.Close();
+        }
+
+        public static void splicing_scheme_2(string A_3, string A_10, string A_11, string A_2,
+                                             string B_5, string B_7, string B_1,
+                                             string C_9, string C_6,
+                                             string A_temperature, string A_humidity,
+                                             string B_temperature,string B_humidity,
+                                             string C_shredded_temperature, string C_shredded_humidity, string C_roasted_temperature, string C_roasted_humidity)
+        {
+            // 连接数据库
+            string sql_link = "Server = localhost; User ID = sa; Pwd = 2013cj1055; DataBase = Prediction";
+            SqlConnection con = new SqlConnection(sql_link);
+            // 打开连接并判断连接状态
+            con.Open();
+            // 定义添加数据的字符串
+            string sql_insert = "insert into [Prediction].[dbo].[T_Pred_Test](" +
+                                // 阶段A
+                                "[F001],"+
+                                "[F002],"+
+                                "[F003],"+
+                                "[F004],"+
+
+                                // 阶段B
+                                "[F005],"+
+                                "[F006],"+
+                                "[F007],"+
+
+                                // 阶段C
+                                "[F008],"+
+                                "[F009],"+
+
+                                // 温湿度
+                                "[F010],"+
+                                "[F011],"+
+
+                                "[F012],"+
+                                "[F013],"+
+
+                                "[F014],"+
+                                "[F015],"+
+                                "[F016],"+
+                                "[F017]"+
+
+                                ")values("+
+                                A_3+","+
+                                A_10+","+
+                                A_11+","+
+                                A_2+","+
+                                
+                                B_5+","+
+                                B_7+","+
+                                B_1+","+
+
+                                C_9+","+
+                                C_6+","+
+
+                                // 温湿度
+                                A_temperature+","+
+                                A_humidity+","+
+
+                                B_temperature+","+
+                                B_humidity+","+
+
+                                C_shredded_temperature+","+
+                                C_shredded_humidity+","+
+                                C_roasted_temperature+","+
+                                C_roasted_humidity+
                                 ")";
             // Console.WriteLine(sql_insert);// 这句用来查看SQL命令
             SqlCommand sql_insert_cmd = new SqlCommand(sql_insert, con);
