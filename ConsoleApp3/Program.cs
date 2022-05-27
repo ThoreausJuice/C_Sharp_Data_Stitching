@@ -14,31 +14,45 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            List<ArrayList> a = new List<ArrayList>();
-            List<ArrayList> b = new List<ArrayList>();
-            List<ArrayList> c = new List<ArrayList>();
-            a.Add(1);a.Add(2);a.Add(3);
-            b.Add(4);b.Add(5);b.Add(6);
-            c.Add(a);c.Add(b);
-            foreach(var i in c)
+            List<string> a = new List<string>();
+            // 向集合中填充数据
+            for (int i = 0; i < 10; i++)
             {
-                foreach(var j in i)
-                {
-                    Console.WriteLine(j);
-                }
+                // a.Add(i);
+                a.Add(Convert.ToString(i));
             }
-            // for(int i = 0; i < c.Count; i++)
+
+            // 方法一：
+            if (a.Exists(x => Convert.ToInt32(x) < 1))
+            {
+                Console.WriteLine("yes1");
+            }
+            else
+            {
+                Console.WriteLine("no1");
+            }
+
+            // // 方法二：
+            // if (a.Contains("5") == false)
             // {
-            //     for(int j = 0; j < c[i].Count; j++)
-            //     {
-            //         Console.WriteLine(c[i][j]);
-            //     }
+            //     Console.WriteLine("yes2");
             // }
+            // else
+            // {
+            //     Console.WriteLine("no2");
+            // }
+
             Console.ReadLine();
         }
-        public static string test_function()
+        public static void Print_1D(List<string> any_collection)
         {
-            return System.Reflection.MethodBase.GetCurrentMethod().Name;
+            // 该函数用来查看编程中获取的一维集合的情况
+
+            for (int i = 0; i < any_collection.Count; i++)
+            {
+                Console.WriteLine(i + " : " + any_collection[i]);
+            }
+            Console.WriteLine();
         }
     }
 }

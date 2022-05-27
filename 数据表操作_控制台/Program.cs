@@ -932,10 +932,10 @@ namespace 数据表操作_控制台
                                              string Value)
         {
             DateTime RecordTime = Convert.ToDateTime(X_0);
-            string InputID = RecordTime.ToString("yyyyMMddHHmmssffff") + 
-                                BatchID +
-                                FeatureID + 
-                                SpecificFlag.PadLeft(4,'0');
+            string InputID = RecordTime.ToString("yyyyMMddHHmmssffff") + //16位
+                                BatchID + //10位
+                                FeatureID + //3位
+                                SpecificFlag.PadLeft(4,'0'); //4位
             // 连接数据库
             string sql_link = "Server = localhost; User ID = sa; Pwd = 2013cj1055; DataBase = Prediction";
             SqlConnection con = new SqlConnection(sql_link);

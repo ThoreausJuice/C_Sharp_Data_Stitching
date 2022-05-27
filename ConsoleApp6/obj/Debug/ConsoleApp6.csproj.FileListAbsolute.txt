@@ -1,0 +1,8 @@
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\ConsoleApp6\bin\Debug\ConsoleApp6.exe.config
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\ConsoleApp6\bin\Debug\ConsoleApp6.exe
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\ConsoleApp6\bin\Debug\ConsoleApp6.pdb
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\ConsoleApp6\obj\Debug\ConsoleApp6.csproj.AssemblyReference.cache
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\ConsoleApp6\obj\Debug\ConsoleApp6.csproj.SuggestedBindingRedirects.cache
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\ConsoleApp6\obj\Debug\ConsoleApp6.csproj.CoreCompileInputs.cache
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\ConsoleApp6\obj\Debug\ConsoleApp6.exe
+C:\Users\邱光磊\Documents\实习\C_Sharp_Data_Stitching\ConsoleApp6\obj\Debug\ConsoleApp6.pdb

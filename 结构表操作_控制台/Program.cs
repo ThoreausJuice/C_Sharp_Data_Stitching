@@ -20,32 +20,33 @@ namespace 结构表操作_控制台
             ArrayList featureName = new ArrayList();
             ArrayList UnitID = new ArrayList();
             ArrayList UnitName = new ArrayList();
+            ArrayList DataType = new ArrayList();
             // 阶段A
-            FeatureID.Add("F001");featureName.Add("B线润叶加水流量");UnitID.Add("45");UnitName.Add("叶片B进预混柜B");
-            FeatureID.Add("F002");featureName.Add("B线润叶注入蒸汽流量");UnitID.Add("45");UnitName.Add("叶片B进预混柜B");
-            FeatureID.Add("F003");featureName.Add("B线润叶前温度仪实际值");UnitID.Add("45");UnitName.Add("叶片B进预混柜B");
-            FeatureID.Add("F004");featureName.Add("B线润叶回风温度");UnitID.Add("45");UnitName.Add("叶片B进预混柜B");
+            FeatureID.Add("F001");featureName.Add("叶片B线润叶加水流量");UnitID.Add("45");UnitName.Add("叶片B进预混柜B");DataType.Add(0);
+            FeatureID.Add("F002");featureName.Add("叶片B线TBL注入蒸汽流量实际值");UnitID.Add("45");UnitName.Add("叶片B进预混柜B");DataType.Add(0);
+            FeatureID.Add("F003");featureName.Add("B线润叶前温度仪实际值");UnitID.Add("45");UnitName.Add("叶片B进预混柜B");DataType.Add(0);
+            FeatureID.Add("F004");featureName.Add("叶片B线润叶回风温度");UnitID.Add("45");UnitName.Add("叶片B进预混柜B");DataType.Add(0);
             // 阶段B
-            FeatureID.Add("F005");featureName.Add("B线加料入口蒸汽阀门开度");UnitID.Add("46");UnitName.Add("预混柜B出料进储叶柜");
-            FeatureID.Add("F006");featureName.Add("B线加料加水瞬时流量");UnitID.Add("46");UnitName.Add("预混柜B出料进储叶柜");
-            FeatureID.Add("F007");featureName.Add("[叶片B加料机出口温度[℃]]]");UnitID.Add("46");UnitName.Add("预混柜B出料进储叶柜");
+            FeatureID.Add("F005");featureName.Add("B线加料入口蒸汽阀门开度");UnitID.Add("46");UnitName.Add("预混柜B出料进储叶柜");DataType.Add(0);
+            FeatureID.Add("F006");featureName.Add("B线加水瞬时流量(流量计)");UnitID.Add("46");UnitName.Add("预混柜B出料进储叶柜");DataType.Add(0);
+            FeatureID.Add("F007");featureName.Add("叶片B加料机出口温度 ℃ ");UnitID.Add("46");UnitName.Add("预混柜B出料进储叶柜");DataType.Add(0);
             // 阶段C
-            FeatureID.Add("F008");featureName.Add("燃烧炉出口工艺气温度实际值"); UnitID.Add("19");UnitName.Add("制丝掺配CA");
-            FeatureID.Add("F009");featureName.Add("风选出口水分仪水分实际值");UnitID.Add("19");UnitName.Add("制丝掺配CA");
+            FeatureID.Add("F008");featureName.Add("燃烧炉出口工艺气温度实际值"); UnitID.Add("19");UnitName.Add("制丝掺配CA");DataType.Add(0);
+            FeatureID.Add("F009");featureName.Add("风选出口水分仪水分实际值");UnitID.Add("19");UnitName.Add("制丝掺配CA");DataType.Add(0);
             // 阶段A 温湿度
-            FeatureID.Add("F010");featureName.Add("[K12车间2#(B线润叶)温度]");UnitID.Add("P45");UnitName.Add("A段温度");
-            FeatureID.Add("F011");featureName.Add("[K12车间2#(B线润叶)湿度]");UnitID.Add("P45");UnitName.Add("A段湿度");
+            FeatureID.Add("F010");featureName.Add("K12车间2#(B线润叶)温度");UnitID.Add("45");UnitName.Add("A段温度");DataType.Add(1);
+            FeatureID.Add("F011");featureName.Add("K12车间2#(B线润叶)湿度");UnitID.Add("45");UnitName.Add("A段湿度");DataType.Add(1);
             // 阶段B 温湿度
-            FeatureID.Add("F012");featureName.Add("[K13车间5#(B线加料)温度]");UnitID.Add("P46");UnitName.Add("B段温度");
-            FeatureID.Add("F013");featureName.Add("[K13车间5#(B线加料)湿度]");UnitID.Add("P46");UnitName.Add("B段湿度");
+            FeatureID.Add("F012");featureName.Add("K13车间5#(B线加料)温度");UnitID.Add("46");UnitName.Add("B段温度");DataType.Add(1);
+            FeatureID.Add("F013");featureName.Add("K13车间5#(B线加料)湿度");UnitID.Add("46");UnitName.Add("B段湿度");DataType.Add(1);
             // 阶段C 温湿度
-            FeatureID.Add("F014");featureName.Add("[K11车间4#(C线切丝)温度]");UnitID.Add("P19");UnitName.Add("C段温度");
-            FeatureID.Add("F015");featureName.Add("[K11车间4#(C线切丝)湿度]");UnitID.Add("P19");UnitName.Add("C段湿度");
-            FeatureID.Add("F016");featureName.Add("[K11车间6#(C线烘丝)湿度]");UnitID.Add("P19");UnitName.Add("C段温度");
-            FeatureID.Add("F017");featureName.Add("[K11车间6#(C线烘丝)温度]");UnitID.Add("P19");UnitName.Add("C段湿度");
+            FeatureID.Add("F014");featureName.Add("K11车间4#(C线切丝)温度");UnitID.Add("19");UnitName.Add("C段温度");DataType.Add(1);
+            FeatureID.Add("F015");featureName.Add("K11车间4#(C线切丝)湿度");UnitID.Add("19");UnitName.Add("C段湿度");DataType.Add(1);
+            FeatureID.Add("F016");featureName.Add("K11车间6#(C线烘丝)湿度");UnitID.Add("19");UnitName.Add("C段温度");DataType.Add(1);
+            FeatureID.Add("F017");featureName.Add("K11车间6#(C线烘丝)温度");UnitID.Add("19");UnitName.Add("C段湿度");DataType.Add(1);
 
             truncate_data("Prediction", "T_Pred_Structure");
-            insert_data(ref FeatureID, ref featureName, ref UnitID, ref UnitName);
+            insert_data(ref FeatureID, ref featureName, ref UnitID, ref UnitName, ref DataType);
 
             Console.ReadLine();
         }
@@ -53,7 +54,8 @@ namespace 结构表操作_控制台
         public static void insert_data(ref ArrayList FeatureID,
                                         ref ArrayList featureName,
                                         ref ArrayList UnitID,
-                                        ref ArrayList UnitName)
+                                        ref ArrayList UnitName,
+                                        ref ArrayList DataType)
         {
             // 连接数据库
             string sql_link = "Server = localhost; User ID = sa; Pwd = 2013cj1055; DataBase = Prediction";
@@ -75,13 +77,15 @@ namespace 结构表操作_控制台
                                     "FeatureID,"+
                                     "featureName,"+
                                     "UnitID,"+
-                                    "UnitName"+
+                                    "UnitName,"+
+                                    "DataType"+
                                     ")values("+
                                     "'F" + zero_pad(i+1) +"',"+
                                     // "'" + Convert.ToString(FeatureID[i]) +"',"+
                                     "'" + Convert.ToString(featureName[i]) +"',"+
                                     "'" + Convert.ToString(UnitID[i]) +"',"+
-                                    "'" + Convert.ToString(UnitName[i]) +"'"+
+                                    "'" + Convert.ToString(UnitName[i]) +"',"+
+                                    "'" + Convert.ToString(DataType[i]) +"'"+
                                     ")";
                 // Console.WriteLine(sql_insert);// 这句用来查看SQL命令
                 SqlCommand sql_insert_cmd = new SqlCommand(sql_insert, con);
