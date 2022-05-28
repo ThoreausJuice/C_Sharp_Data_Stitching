@@ -15,6 +15,10 @@ namespace ConsoleApp6
         // 该版本全面采用泛型List<T>替代之前版本的ArrayList，使得程序因二维集合的存在而更加灵活
         static void Main(string[] args)
         {
+            // 计时开始
+            DateTime program_start_time = System.DateTime.Now;
+            Print_Line("开始时间：" + program_start_time);
+            // 初始化数据表
             Truncate_Table("[T_Pred_Data]");
             Truncate_Table("[T_Pred_Test]");
             // ---------------------------------------------------------------------------------------
@@ -46,7 +50,7 @@ namespace ConsoleApp6
                          ref workshop_data_count);
 
             // 【第三步】针对每一个 BatchId 进行操作
-            for(int BatchId_index = 0; BatchId_index < 1; BatchId_index++) //BatchId_collection.Count
+            for(int BatchId_index = 0; BatchId_index < BatchId_collection.Count; BatchId_index++) //BatchId_collection.Count
             {
                 // 越过阶段少于3的 BatchId
                 string BatchID = BatchId_collection[BatchId_index];
@@ -251,6 +255,12 @@ namespace ConsoleApp6
                 Console.WriteLine(specific_flag + " / " + number_of_stage_Min);
             }
             Console.WriteLine("fin");
+            // 计时结束
+            DateTime program_end_time = System.DateTime.Now;
+            Print_Line("结束时间：" + program_end_time);
+            TimeSpan ts = program_end_time.Subtract(program_start_time);
+            Print_Line("用时：" + ts);
+            // 用时：01:24:44.4947234
             Console.ReadLine();
         }
 
@@ -654,7 +664,7 @@ namespace ConsoleApp6
             }
             sql_insert = sql_insert.Remove(sql_insert.LastIndexOf(","), 1);
             sql_insert += ")";
-            Console.WriteLine(sql_insert);// 这句用来查看SQL命令
+            // Console.WriteLine(sql_insert);// 这句用来查看SQL命令
             SqlCommand sql_insert_cmd = new SqlCommand(sql_insert, con);
             sql_insert_cmd.ExecuteNonQuery();
 
